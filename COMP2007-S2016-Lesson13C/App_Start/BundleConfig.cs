@@ -20,8 +20,23 @@ namespace COMP2007_S2016_Lesson13C
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular.js",
+                      "~/Scripts/angular-route.js",
+                      "~/Scripts/angular-resource.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/application").Include(
+                      "~/Scripts/Modules/app.js",
+                      "~/Scripts/Controllers/genre.js",
+                      "~/Scripts/Controllers/albumsbygenre.js",
+                      "~/Scripts/Services/genre.js",
+                      "~/Scripts/Services/albumsbygenre.js"
+                ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
                       "~/Content/site.css"));
         }
     }
